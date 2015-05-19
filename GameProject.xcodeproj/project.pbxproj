@@ -15,6 +15,7 @@
 		6528761A1B0B8EA9007B39CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652876191B0B8EA9007B39CA /* Images.xcassets */; };
 		6528761D1B0B8EA9007B39CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6528761B1B0B8EA9007B39CA /* LaunchScreen.xib */; };
 		652876291B0B8EA9007B39CA /* GameProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652876281B0B8EA9007B39CA /* GameProjectTests.swift */; };
+		65F38D3E1B0BF5DE004F92C6 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F38D3D1B0BF5DE004F92C6 /* PlayScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		652876221B0B8EA9007B39CA /* GameProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		652876271B0B8EA9007B39CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652876281B0B8EA9007B39CA /* GameProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProjectTests.swift; sourceTree = "<group>"; };
+		65F38D3D1B0BF5DE004F92C6 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = ../PlayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				6528760E1B0B8EA9007B39CA /* AppDelegate.swift */,
 				652876101B0B8EA9007B39CA /* GameScene.sks */,
 				652876121B0B8EA9007B39CA /* GameScene.swift */,
+				65F38D3D1B0BF5DE004F92C6 /* PlayScene.swift */,
 				652876141B0B8EA9007B39CA /* GameViewController.swift */,
 				652876161B0B8EA9007B39CA /* Main.storyboard */,
 				652876191B0B8EA9007B39CA /* Images.xcassets */,
@@ -221,6 +224,7 @@
 			files = (
 				652876131B0B8EA9007B39CA /* GameScene.swift in Sources */,
 				652876151B0B8EA9007B39CA /* GameViewController.swift in Sources */,
+				65F38D3E1B0BF5DE004F92C6 /* PlayScene.swift in Sources */,
 				6528760F1B0B8EA9007B39CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,7 @@
 				6528762E1B0B8EA9007B39CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6528762F1B0B8EA9007B39CA /* Build configuration list for PBXNativeTarget "GameProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				652876311B0B8EA9007B39CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
