@@ -9,13 +9,11 @@
 import SpriteKit
 
 class PlayScene: SKScene {
-    var playButton = SKSpriteNode(imageNamed: "play")
+
     
     override func didMoveToView(view: SKView) {
-        println("We are going to play the game")
-        
-        self.playButton.position = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMaxY(self.frame))
-        self.addChild(self.playButton)
+        println("We are at the scene")
         self.backgroundColor = UIColor.blueColor()
+
     }
 }

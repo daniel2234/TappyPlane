@@ -17,6 +17,8 @@ class GameScene: SKScene {
         self.playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         self.addChild(self.playButton)
         self.backgroundColor = UIColor.blueColor()
+        
+        
 
 //        var planeTexture = SKTexture(imageNamed: "planeYellow1");
 //        var planeSecondTexture = SKTexture(imageNamed: "planeYellow2");
@@ -41,8 +43,13 @@ class GameScene: SKScene {
         for touch : AnyObject in touches {
             let location = touch.locationInNode(self)
             if self.nodeAtPoint(location) == self.playButton{
-                print("Go to game")
                 var scene = PlayScene(size:self.size)
+                let skView = self.view as SKView?
+                skView?.ignoresSiblingOrder = true
+                scene.scaleMode = .ResizeFill
+                scene.size = skView!.bounds.size
+                skView?.presentScene(scene)
+                
             }
         }
     }
