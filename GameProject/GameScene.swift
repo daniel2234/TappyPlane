@@ -10,7 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-//    var plane = SKSpriteNode()
+
     var playButton = SKSpriteNode(imageNamed: "play")
     
     override func didMoveToView(view: SKView) {
@@ -18,22 +18,6 @@ class GameScene: SKScene {
         self.addChild(self.playButton)
         self.backgroundColor = UIColor.blueColor()
         
-        
-
-//        var planeTexture = SKTexture(imageNamed: "planeYellow1");
-//        var planeSecondTexture = SKTexture(imageNamed: "planeYellow2");
-//        var planeThirdTexture = SKTexture(imageNamed: "planeYellow3");
-//        
-//        
-//        plane = SKSpriteNode(texture: planeTexture)
-//        plane.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
-//        
-//        
-//        var animation = SKAction.animateWithTextures([planeTexture,planeSecondTexture,planeThirdTexture], timePerFrame: 0.1)
-//        var makePlaneTap = SKAction.repeatActionForever(animation)
-//        plane.runAction(makePlaneTap)
-//        
-//        self.addChild(plane)
 
     }
     
