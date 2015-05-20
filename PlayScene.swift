@@ -10,27 +10,43 @@ import SpriteKit
 
 class PlayScene: SKScene {
     
-    let runningGround = SKSpriteNode(imageNamed: "groundGrass")
-    var plane = SKSpriteNode()
+//    let runningGround = SKSpriteNode(imageNamed: "groundGrass")
     
+    //defining the moving ground
+    var runningGround = SKSpriteNode()
+    //defining the plane node
+    var plane = SKSpriteNode()
     //define the animation node project
     var animation = SKSpriteNode()
-    
+    //define the background image project
     var backGround = SKSpriteNode()
     
     
     override func didMoveToView(view: SKView) {
         println("We are at the scene")
+        var grTexture = SKTexture(imageNamed:"groundGrass")
+        runningGround.anchorPoint = CGPointMake(0, 0.5)
+        runningGround = SKSpriteNode(texture: grTexture)
+        runningGround.position = CGPointMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame) + (self.runningGround.size.height/2))
+
+        var moveSecondGround = SKAction.moveByX(-grTexture.size().width, y: 0, duration: 8)
+        var replaceSecondBackground = SKAction.moveByX(grTexture.size().width, y: 0, duration: 0)
+        var moveSecondForever = SKAction.repeatActionForever(SKAction.sequence([moveSecondGround,replaceSecondBackground]))
+        var wave = SKSpriteNode(texture: grTexture)
+        wave.position = CGPoint(x: grTexture.size().width / 2 + grTexture.size().width , y: CGRectGetMidY(self.frame))
+        wave.runAction(moveSecondForever)
+
         
-        self.runningGround.anchorPoint = CGPointMake(0, 0.5)
-        self.runningGround.position = CGPointMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame) + (self.runningGround.size.height))
-        self.runningGround.zPosition = 11
-        self.addChild(self.runningGround)
+        for var i:CGFloat = 0; i<3; i++ {
+            var wave = SKSpriteNode(texture: grTexture)
+            wave.position = CGPoint(x: grTexture.size().width / 2 + grTexture.size().width * i, y: CGRectGetMinY(self.frame) + (self.runningGround.size.height/2))
+            wave.runAction(moveSecondForever)
+            wave.zPosition = 9
+            self.addChild(wave)
+        }
+
         
-//        var moveMountain = SKAction.moveByX(<#deltaX: CGFloat#>, y: <#CGFloat#>, duration: <#NSTimeInterval#>)
-        
-        
-        var planeTexture = SKTexture(imageNamed: "planeYellow1");
+       var planeTexture = SKTexture(imageNamed: "planeYellow1");
         var planeSecondTexture = SKTexture(imageNamed: "planeYellow2");
         var planeThirdTexture = SKTexture(imageNamed: "planeYellow3");
         plane = SKSpriteNode(texture: planeTexture)
@@ -46,15 +62,15 @@ class PlayScene: SKScene {
         plane.physicsBody?.dynamic = true
         plane.physicsBody?.allowsRotation = false
         plane.zPosition = 10
-        
         self.addChild(plane)
+        
         //define the ground object
         var ground = SKNode()
+        
         //set the ground position
         ground.position = CGPointMake(0, 0)
         ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width,1))
         ground.physicsBody?.dynamic = false
-        
         self.addChild(ground)
 
         //declare the background
@@ -62,9 +78,10 @@ class PlayScene: SKScene {
         backGround = SKSpriteNode(texture: bgTexture)
         backGround.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
         backGround.size.height = self.frame.height
-        
+        backGround.zPosition = 0;
         self.addChild(backGround)
         
+        //move the background
         var moveBackground = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
         var replaceBackground = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
         var moveForever = SKAction.repeatActionForever(SKAction.sequence([moveBackground,replaceBackground]))
@@ -73,9 +90,7 @@ class PlayScene: SKScene {
             var wave = SKSpriteNode(texture: bgTexture)
             wave.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i, y: CGRectGetMidY(self.frame))
             wave.size.height = self.frame.height
-            
             wave.runAction(moveForever)
-            
             self.addChild(wave)
         }
 }
