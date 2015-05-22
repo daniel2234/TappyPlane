@@ -15,6 +15,8 @@
 		6528761A1B0B8EA9007B39CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652876191B0B8EA9007B39CA /* Images.xcassets */; };
 		6528761D1B0B8EA9007B39CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6528761B1B0B8EA9007B39CA /* LaunchScreen.xib */; };
 		652876291B0B8EA9007B39CA /* GameProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652876281B0B8EA9007B39CA /* GameProjectTests.swift */; };
+		653E433B1B0E662900B4C08C /* planepropeller.wav in Resources */ = {isa = PBXBuildFile; fileRef = 653E433A1B0E662900B4C08C /* planepropeller.wav */; };
+		653E433D1B0E734300B4C08C /* 54405__korgms2000b__button-click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 653E433C1B0E734300B4C08C /* 54405__korgms2000b__button-click.wav */; };
 		65F38D3E1B0BF5DE004F92C6 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F38D3D1B0BF5DE004F92C6 /* PlayScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		652876221B0B8EA9007B39CA /* GameProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		652876271B0B8EA9007B39CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652876281B0B8EA9007B39CA /* GameProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProjectTests.swift; sourceTree = "<group>"; };
+		653E433A1B0E662900B4C08C /* planepropeller.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = planepropeller.wav; sourceTree = "<group>"; };
+		653E433C1B0E734300B4C08C /* 54405__korgms2000b__button-click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "54405__korgms2000b__button-click.wav"; sourceTree = "<group>"; };
 		65F38D3D1B0BF5DE004F92C6 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = ../PlayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,8 @@
 		6528760C1B0B8EA9007B39CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				653E433A1B0E662900B4C08C /* planepropeller.wav */,
+				653E433C1B0E734300B4C08C /* 54405__korgms2000b__button-click.wav */,
 				6528760D1B0B8EA9007B39CA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +211,8 @@
 				6528761A1B0B8EA9007B39CA /* Images.xcassets in Resources */,
 				652876111B0B8EA9007B39CA /* GameScene.sks in Resources */,
 				652876181B0B8EA9007B39CA /* Main.storyboard in Resources */,
+				653E433D1B0E734300B4C08C /* 54405__korgms2000b__button-click.wav in Resources */,
+				653E433B1B0E662900B4C08C /* planepropeller.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

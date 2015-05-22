@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene{
     
 
     var playButton = SKSpriteNode(imageNamed: "play")
@@ -17,8 +17,6 @@ class GameScene: SKScene {
         self.playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         self.addChild(self.playButton)
         self.backgroundColor = UIColor.blueColor()
-        
-
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
