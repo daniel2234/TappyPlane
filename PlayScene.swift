@@ -180,7 +180,7 @@ class PlayScene: SKScene,SKPhysicsContactDelegate{
         
         self.addChild(topRock)
         self.addChild(bottomRock)
-        
+        //create the gap
         var gap = SKNode()
         gap.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + rockOffset)
         gap.physicsBody = SKPhysicsBody(rectangleOfSize:CGSizeMake(bottomRock.size.width, gapHeight))
@@ -198,10 +198,12 @@ class PlayScene: SKScene,SKPhysicsContactDelegate{
         var gameover = 0
         
         plane.physicsBody?.categoryBitMask = deadPlaneGroup
-//        plane.physicsBody?.contactTestBitMask =
-//        plane.physicsBody?.collisionBitMask =
+       
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("restartGame"), userInfo: nil, repeats: false)
+        plane.physicsBody?.contactTestBitMask = rockGroup
+        plane.physicsBody?.collisionBitMask = rockGroup
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("restartGame"), userInfo: nil, repeats: false)
         
 //        runningGround.speed = 0
 //        plane.speed = 0
